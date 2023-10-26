@@ -52,6 +52,16 @@ const getDrinkItem = (drink) => {
   return section;
 };
 
+const hideSection = (section) => {
+  section.classList.add("hide");
+};
+
 window.onload = () => {
   showDrinks();
+  document.getElementById("vodka-label").onclick =
+    document.getElementById("vodka").hideSection;
+  document.getElementById("gin-label").onclick =
+    document.getElementById("gin").hideSection;
+  document.getElementById("rum-label").onclick =
+    document.getElementById("rum").hideSection;
 };
