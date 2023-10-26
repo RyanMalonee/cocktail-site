@@ -40,7 +40,7 @@ const showDrinks = async () => {
 const getDrinkItem = (drink) => {
   const section = document.createElement("section");
 
-  const name = document.createElement("h2");
+  const name = document.createElement("h4");
   name.innerHTML = drink.strDrink;
   section.append(name);
 
