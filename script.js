@@ -52,16 +52,22 @@ const getDrinkItem = (drink) => {
   return section;
 };
 
-const hideSection = (section) => {
-  section.classList.add("hide");
+const hideVodka = () => {
+  console.log("here");
+  document.getElementById("vodka").classList.toggle("hidden");
+};
+
+const hideRum = () => {
+  document.getElementById("rum").classList.toggle("hidden");
+};
+
+const hideGin = () => {
+  document.getElementById("gin").classList.toggle("hidden");
 };
 
 window.onload = () => {
   showDrinks();
-  document.getElementById("vodka-label").onclick =
-    document.getElementById("vodka").hideSection;
-  document.getElementById("gin-label").onclick =
-    document.getElementById("gin").hideSection;
-  document.getElementById("rum-label").onclick =
-    document.getElementById("rum").hideSection;
+  document.getElementById("vodka-label").onclick = hideVodka;
+  document.getElementById("rum-label").onclick = hideRum;
+  document.getElementById("gin-label").onclick = hideGin;
 };
