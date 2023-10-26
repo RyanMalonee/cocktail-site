@@ -1,7 +1,7 @@
 const getDrinks = async (url) => {
   try {
     const response = await fetch(url);
-    return await response.json();
+    return response.json();
   } catch (error) {
     console.log(error);
   }
@@ -12,15 +12,21 @@ const showDrinks = async () => {
   const rumSection = document.getElementById("rum");
   const ginSection = document.getElementById("gin");
 
-  const vodkaDrinks = await getDrinks(
+  const vodkaData = await getDrinks(
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=vodka"
   );
-  const rumDrinks = await getDrinks(
+  const rumData = await getDrinks(
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=rum"
   );
-  const ginDrinks = await getDrinks(
+  const ginData = await getDrinks(
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=gin"
   );
+
+  const vodkaDrinks = vodkaData.drinks;
+  const rumDrinks = rumData.drinks;
+  const ginDrinks = ginData.drinks;
+
+  console.log(vodkaDrinks);
 
   vodkaDrinks.forEach((drink) => {
     vodkaSection.append(getDrinkItem(drink));
