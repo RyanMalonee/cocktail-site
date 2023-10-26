@@ -26,8 +26,6 @@ const showDrinks = async () => {
   const rumDrinks = rumData.drinks;
   const ginDrinks = ginData.drinks;
 
-  console.log(vodkaDrinks);
-
   vodkaDrinks.forEach((drink) => {
     vodkaSection.append(getDrinkItem(drink));
   });
@@ -50,6 +48,7 @@ const getDrinkItem = (drink) => {
   img.src = drink.strDrinkThumb;
   section.append(img);
 
+  section.classList.add("drink-style");
   return section;
 };
 
