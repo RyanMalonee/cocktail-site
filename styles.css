@@ -1,9 +1,18 @@
 /* Structure */
 
+body {
+    background-color: black;
+}
+
 /*Typography*/
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: aqua;
+}
 
 /* Larger Resolutions */
 @media only screen and (min-width: 600px) {
 
-    
+
 }
