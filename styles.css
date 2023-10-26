@@ -1,50 +1,58 @@
 /* Structure */
 
 body {
-    background-color: black;
-    max-width: 100%;
+  background-color: black;
+  max-width: 100%;
 }
 
 .drink-style {
-    background-color: aqua;
-    border-radius: 5px;
-    padding: 5px;
-    box-shadow: 5px 5px lightcoral;
-    margin: 10px;
+  background-color: aqua;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 5px 5px lightcoral;
+  margin: 10px;
 }
 
 img {
-    width: 90%;
+  width: 90%;
+}
+
+#vodka,
+#rum,
+#gin {
+  justify-content: center;
 }
 
 /*Typography*/
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: aqua;
+  font-family: Arial, Helvetica, sans-serif;
+  color: aqua;
+  text-align: center;
+  border-bottom: 2px solid aqua;
 }
 
 h4 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: lightcoral;
-    text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: lightcoral;
+  text-align: center;
 }
 
 /* Larger Resolutions */
 @media only screen and (min-width: 600px) {
+  .drink-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+  }
 
-    .drink-style {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 20%;
-    }
-
-    #vodka, #rum, #gin {
-        display: flex;
-        flex-grow: 0;
-        flex-wrap: wrap;
-    }
-
+  #vodka,
+  #rum,
+  #gin {
+    display: flex;
+    flex-grow: 0;
+    flex-wrap: wrap;
+  }
 }
